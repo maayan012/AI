@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -37,24 +36,38 @@
         inset 0 1px 0 rgba(255,255,255,0.06);
     }
 
-    .titleName{
-      letter-spacing: .2px;
+    .profileRing{
+      display:inline-flex;
+      padding:3px;
+      border-radius:9999px;
+      background: linear-gradient(135deg, rgba(56,189,248,1) 0%, rgba(99,102,241,1) 50%, rgba(56,189,248,1) 100%);
+      box-shadow:
+        0 0 28px rgba(56,189,248,0.28),
+        0 0 60px rgba(56,189,248,0.12);
     }
 
-    .subName{
-      color:#38bdf8;
+    .profileImg{
+      width:120px;
+      height:120px;
+      border-radius:9999px;
+      object-fit:cover;
+      background:#111827;
+      border:3px solid rgba(15,23,42,0.9);
     }
 
-    .muted{
-      color: rgba(226,232,240,0.60);
+    .muted{color:rgba(226,232,240,0.65);}
+    .muted2{color:rgba(226,232,240,0.50);}
+
+    .bioText{
+      font-size: 15px;
+      line-height: 1.7;
     }
 
-    .muted2{
-      color: rgba(226,232,240,0.48);
-    }
-
-    .socialRow{
-      gap:14px;
+    .sectionTitle{
+      text-align:center;
+      font-weight:700;
+      font-size:20px;
+      margin:26px 0 16px;
     }
 
     .socialBtn{
@@ -67,135 +80,119 @@
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.10);
       color: rgba(226,232,240,0.70);
-      transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+      transition: all .18s ease;
       text-decoration:none;
+      font-weight:700;
     }
-
     .socialBtn:hover{
       transform: translateY(-2px);
-      background: rgba(255,255,255,0.08);
       color:#38bdf8;
-      box-shadow: 0 10px 22px rgba(56,189,248,0.16);
+      box-shadow:0 10px 22px rgba(56,189,248,0.16);
     }
 
-    .sectionHead{
-      text-align:center;
-      font-weight:700;
-      font-size:20px;
-      margin-top:8px;
-      margin-bottom:18px;
-    }
-
-    .serviceList{
+    .aboutList{
+      margin-top: 12px;
       display:flex;
       flex-direction:column;
-      gap:14px;
+      gap:10px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(226,232,240,0.65);
     }
 
-    .servicePill{
-      width:100%;
-      padding:18px 16px;
-      border-radius:18px;
-      text-align:center;
-      font-weight:600;
-      background:
-        radial-gradient(120% 140% at 15% 10%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 55%, rgba(255,255,255,0.02) 100%);
-      border: 1px solid rgba(255,255,255,0.10);
-      color:#fff;
-      text-decoration:none;
-      transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
-    }
-
-    .servicePill:hover{
-      transform: translateY(-2px);
-      border-color: rgba(56,189,248,0.22);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.28);
-      background:
-        radial-gradient(120% 140% at 15% 10%, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.05) 55%, rgba(255,255,255,0.03) 100%);
-    }
-
-    .ctaWrap{
-      margin-top:22px;
+    .aboutItem{
       display:flex;
-      justify-content:center;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .dot{
+      color:#38bdf8;
+      font-weight:800;
+      line-height: 1.4;
     }
 
     .ctaBtn{
       width:100%;
-      padding:18px 18px;
+      padding:18px;
       border-radius:9999px;
       font-weight:800;
       font-size:18px;
       text-align:center;
       color:#fff;
       text-decoration:none;
-      background: linear-gradient(90deg, rgba(14,165,233,1) 0%, rgba(37,99,235,1) 55%, rgba(99,102,241,1) 100%);
-      box-shadow: 0 16px 44px rgba(37,99,235,0.26);
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      background: linear-gradient(90deg,#0ea5e9 0%,#2563eb 55%,#6366f1 100%);
+      box-shadow:0 16px 44px rgba(37,99,235,0.26);
+      transition:all .18s ease;
+      display:block;
     }
-
     .ctaBtn:hover{
-      transform: translateY(-2px);
-      filter: brightness(1.03);
-      box-shadow: 0 20px 54px rgba(37,99,235,0.30);
+      transform:translateY(-2px);
+      box-shadow:0 20px 54px rgba(37,99,235,0.30);
     }
   </style>
 </head>
 
 <body class="p-4 md:p-8 flex justify-center">
   <main class="w-full max-w-md cardShell px-6 md:px-8 pt-10 pb-8">
-    <header class="text-center">
-      <h1 class="titleName text-4xl font-bold mb-2">מעיין שלום</h1>
-      <div class="subName text-lg font-semibold mb-6">Maayan Shalom</div>
 
-      <div class="muted text-sm leading-relaxed">
-        מהנדסת, מתמחה בשיפור תהליכים, דאטה ו AI
+    <header class="text-center">
+      <div class="mb-5 flex justify-center">
+        <span class="profileRing">
+          <img
+            src="https://github.com/maayan012/Maayan-picture/blob/main/Gemini_Generated_Image_ddfux6ddfux6ddfu.png?raw=true"
+            alt="מעיין שלום"
+            class="profileImg"
+            onerror="this.src='https://ui-avatars.com/api/?name=Maayan+Shalom&background=0ea5e9&color=fff&size=240'">
+        </span>
       </div>
-      <div class="muted2 text-sm leading-relaxed mt-1">
-        הרצאות והדרכות על בינה מלאכותית
-      </div>
+
+      <h1 class="text-4xl font-bold mb-2">מעיין שלום</h1>
+      <div class="text-sky-400 font-semibold mb-4">Maayan Shalom</div>
+
+      <div class="muted bioText">מהנדסת, מתמחה בשיפור תהליכים, דאטה ו AI</div>
+      <div class="muted2 bioText mt-1">הרצאות והדרכות על בינה מלאכותית</div>
     </header>
 
+    <section class="mt-8 flex justify-center gap-4">
+      <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61576235122754" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a class="socialBtn" href="https://www.instagram.com/maayan.shalom.ai" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+      <a class="socialBtn" href="https://www.linkedin.com/in/maayan-shalom012" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a class="socialBtn" href="mailto:smartai.maayan@gmail.com" aria-label="Email">✉</a>
+      <a class="socialBtn" href="https://wa.me/972543675502" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
+    </section>
+
     <section class="mt-8">
-      <div class="flex justify-center socialRow">
-        <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61576235122754" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
+      <div class="sectionTitle">קצת עלי</div>
 
-        <a class="socialBtn" href="https://www.instagram.com/maayan.shalom.ai" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
+      <div class="aboutList">
+        <div class="aboutItem">
+          <div class="dot">•</div>
+          <div>מהנדסת תעשייה וניהול (B.Sc, טכניון) מומחית ליישום פתרונות בינה מלאכותית.</div>
+        </div>
 
-        <a class="socialBtn" href="https://www.linkedin.com/in/maayan-shalom012" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+        <div class="aboutItem">
+          <div class="dot">•</div>
+          <div>ניסיון פיקודי והובלת צוותים בצה״ל, בדרגת סרן.</div>
+        </div>
 
-        <a class="socialBtn" href="mailto:smartai.maayan@gmail.com" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </a>
+        <div class="aboutItem">
+          <div class="dot">•</div>
+          <div>מעל עשור של ניסיון בניתוח ושיפור תהליכים, דאטה ו BI.</div>
+        </div>
 
-        <a class="socialBtn" href="https://wa.me/972543675502" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.742 5.502 2.038 7.821L0 32l8.426-2.012A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.09a13.02 13.02 0 0 1-6.64-1.82l-.474-.28-4.996 1.193 1.335-4.873-.309-.5A13.03 13.03 0 1 1 16 29.09zm7.538-9.644c-.412-.206-2.437-1.203-2.815-1.342-.378-.137-.653-.206-.928.206-.275.413-1.065 1.342-1.305 1.618-.24.275-.481.309-.893.103-.412-.206-1.739-.64-3.31-2.04-1.222-1.09-2.047-2.437-2.286-2.849-.24-.413-.025-.636.181-.842.185-.184.412-.481.618-.721.206-.24.275-.413.412-.688.137-.275.069-.515-.034-.721-.103-.206-.928-2.232-1.27-3.058-.333-.8-.672-.69-.928-.703-.24-.012-.515-.015-.79-.015s-.721.103-1.1.515c-.378.413-1.444 1.412-1.444 3.446 0 2.034 1.48 4.001 1.687 4.277.206.275 2.916 4.453 7.07 6.247.988.426 1.76.681 2.36.872.991.315 1.893.27 2.605.164.795-.118 2.437-.996 2.783-1.96.344-.964.344-1.79.24-1.96-.103-.172-.378-.275-.79-.481z"/></svg>
-        </a>
+        <div class="aboutItem">
+          <div class="dot">•</div>
+          <div>גישה פרקטית המנגישה את עולם ה AI בצורה אפקטיבית ושימושית.</div>
+        </div>
       </div>
     </section>
 
-    <section class="mt-10">
-      <div class="sectionHead">קורסים והרצאות</div>
-
-      <div class="serviceList">
-        <a class="servicePill" href="https://wa.me/972543675502" target="_blank" rel="noopener">הרצאות השראה</a>
-        <a class="servicePill" href="https://wa.me/972543675502" target="_blank" rel="noopener">סדנאות והרצאות לארגונים</a>
-        <a class="servicePill" href="https://wa.me/972543675502" target="_blank" rel="noopener">סדנאות והרצאות לאנשי חינוך</a>
-        <a class="servicePill" href="https://wa.me/972543675502" target="_blank" rel="noopener">קורס AI MASTERY</a>
-        <a class="servicePill" href="https://wa.me/972543675502" target="_blank" rel="noopener">מעבדות דמיון</a>
-      </div>
-
-      <div class="ctaWrap">
-        <a class="ctaBtn mt-8" href="https://wa.me/972543675502" target="_blank" rel="noopener">לפרטים והתאמה</a>
-      </div>
+    <section class="mt-10 text-center">
+      <a class="ctaBtn" href="https://wa.me/972543675502" target="_blank" rel="noopener">לפרטים והתאמה</a>
+      <p class="muted2 text-xs mt-6">SMART AI | Maayan Shalom</p>
     </section>
+
   </main>
 </body>
 </html>
-
